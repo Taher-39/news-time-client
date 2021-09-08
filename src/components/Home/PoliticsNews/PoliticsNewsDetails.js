@@ -8,13 +8,12 @@ const PoliticsNewsDetails = () => {
     const { title, newsUploadDate, newsAuthor, newsCategory, newsDetails, image } = newsDetail;
 
     useEffect(() => {
-        fetch('http://localhost:4000/politicsDetail/' + _id)
+        fetch('https://fathomless-everglades-75760.herokuapp.com/singleNewsDetails/' + _id)
             .then(res => res.json())
             .then(data => {
                 setNewsDetail(data)
             })
     }, [_id])
-    console.log(newsDetail)
     return (
         <section className='container mx-auto'>
             <Navbar />
@@ -27,7 +26,7 @@ const PoliticsNewsDetails = () => {
                         <p>{newsUploadDate}</p>
                         <p>{newsCategory}</p>
                     </div>
-                    <h1 className='tracking-normal font-medium my-6'>{title}</h1>
+                    <h1 className='tracking-normal font-medium my-6 text-4xl'>{title}</h1>
                     <p className='my-6'>{newsDetails}</p>
                 </div> 
                 : <div>

@@ -24,8 +24,8 @@ const AddNews = () => {
         formData.append('newsCategory', newsInfo.category)
         formData.append('newsDetails', newsInfo.details)
         formData.append('uploadDate', newsInfo.uploadDate)
-        
-        fetch('http://localhost:4000/addNews', {
+
+        fetch('https://fathomless-everglades-75760.herokuapp.com/addNews', {
             method: 'POST',
             body: formData
         })

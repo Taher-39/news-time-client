@@ -13,7 +13,7 @@ const AdminNavbar = () => {
                         <Link to="/admin">Add-News</Link>
                     </li>
                     <li>
-                        <Link to="#">Add-Admin</Link>
+                        <Link to="/addAdmin">Add-Admin</Link>
                     </li>
                 </ul>
             </nav>

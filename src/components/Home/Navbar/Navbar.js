@@ -1,25 +1,30 @@
-import React from 'react';
-import { a } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     return (
         <section>
             <nav className='navbar p-6 tracking-normal font-medium'>
                 <ul className='flex flex-row justify-center'>
                     <li>
-                        <a href="/">Home</a>
+                        <Link to="/">Home</Link>
                     </li>
                     <li>
-                        <a href="/top-news">Top-News</a>
+                        <Link to="/top-news">Top-News</Link>
                     </li>
                     <li>
-                        <a href="/category">Category</a>
+                        <Link to="/international">International</Link>
                     </li>
                     <li>
-                        <a href="/admin">Admin</a>
+                        <Link to="/sports">Sports</Link>
                     </li>
                     <li>
-                        <a href="/login">Login</a>
+                        <Link to="/admin">Admin</Link>
+                    </li>
+                    <li>
+                        <Link to="/login">{loggedInUser.email ? loggedInUser.name : "Login"}</Link>
                     </li>
                 </ul>
             </nav>
