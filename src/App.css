@@ -57,7 +57,7 @@
 
 /* sliding part start */
 .sliding-header{
-  min-height: 800vh;
+  min-height: 100vh;
 }
 .slider{
   position: relative;
@@ -101,3 +101,14 @@
   transform: scale(1.08);
 }
 /* sliding part end */
+
+/* admin section style start */
+input[type="text"] {
+    width: 300px;
+    height: 35px;
+    padding-right: 50px;
+    outline-color: rgb(84, 105, 106);
+    border: 0;
+    border: 1px solid lightblue;
+}
+/* admin section style end */
