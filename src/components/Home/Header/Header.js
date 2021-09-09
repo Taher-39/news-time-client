@@ -8,10 +8,10 @@ const Header = () => {
         <header className='heading text-white'>
             <div className='container mx-auto flex flex-row justify-between'>
                 <div className='social-icon'>
-                    <span><a href="//facebook.com" target="_blank"><FaFacebook size="1.3em" /></a></span>
-                    <span><a href="//instagram.com" target="_blank"><FaInstagram size="1.3em" /></a></span>
-                    <span><a href="//twitter.com" target="_blank"><FaTwitter size="1.3em" /></a></span>
-                    <span><a href="//youtube.com" target="_blank"><FaYoutube size="1.3em" /></a></span>
+                    <span><Link to="//facebook.com"><FaFacebook size="1.3em" /></Link></span>
+                    <span><Link to="//instagram.com"><FaInstagram size="1.3em" /></Link></span>
+                    <span><Link to="//twitter.com"><FaTwitter size="1.3em" /></Link></span>
+                    <span><Link to="//youtube.com"><FaYoutube size="1.3em" /></Link></span>
                 </div>
                 <h1 className='paper-heading font-normal tracking-normal'>New Time</h1>
                 <p className='date'>{day}</p>

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import Header from '../../Home/Header/Header';
+import AdminNavbar from '../AdminNavbar/AdminNavbar';
 
 const AddAdmin = () => {
     const [userInfo, setUserInfo] = useState({})
@@ -7,11 +9,11 @@ const AddAdmin = () => {
         newUserInfo[e.target.name] = e.target.value;
         setUserInfo(newUserInfo)
     }
-    console.log(userInfo)
+    
     const handleSubmit = (e) => {
         e.preventDefault()
         userInfo.issueDate = new Date();
-        fetch('https://fathomless-everglades-75760.herokuapp.com/addAdmin', {
+        fetch('http://localhost:4000/addAdmin', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(userInfo)
@@ -22,15 +24,27 @@ const AddAdmin = () => {
                     alert('New Admin added Successfully')
                 }
             })
+        
     }
+    
     return (
-        <div className='text-center'>
-            <form onSubmit={handleSubmit}>
-                <input onBlur={handleBlur} type="email" name="email" id="email" required />
-                <input onBlur={handleBlur} type="password" name="password" id="password" required className='my-3' />
-                <input type="button" value="submit" className='btn my-2' />
-            </form>
-        </div>
+        <section>
+            <Header />
+            <AdminNavbar />
+            <div className='text-center'>
+                <form onSubmit={handleSubmit}>
+                    <div className="my-3">
+                        <label htmlFor="email">Admin Email</label> <br />
+                        <input onBlur={handleBlur} type="email" name="email" id="email" required placeholder=' abc@gmail.com' />
+                    </div>
+                    <div className="my-3">
+                        <label htmlFor="email">Admin Email</label> <br />
+                        <input onBlur={handleBlur} type="password" name="password" id="password" required placeholder=' password' />
+                    </div>
+                    <button type="submit" className='btn my-2'>Submit</button>
+                </form>
+            </div>
+        </section>
     );
 };
 

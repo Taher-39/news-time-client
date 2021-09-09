@@ -103,7 +103,7 @@
 /* sliding part end */
 
 /* admin section style start */
-input[type="text"] {
+input[type="text"], input[type="password"],  input[type="email"] {
     width: 300px;
     height: 35px;
     padding-right: 50px;

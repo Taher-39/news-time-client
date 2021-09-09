@@ -45,22 +45,22 @@ const AddNews = () => {
             <AdminNavbar></AdminNavbar>
             <div className="add-news-form  text-center">
                 <form className='p-3' onSubmit={handleSubmit}>
-                    <div className="form-group mb-3">
+                    <div className="mb-3">
                         <label htmlFor="title">Title</label> <br />
                         <input onBlur={handleBlur} type='text' placeholder="News Title *" name='title' required />
                     </div>
 
-                    <div className="form-group my-3">
+                    <div className="my-3">
                         <label htmlFor="author">News Author</label> <br />
                         <input onBlur={handleBlur} type='text' placeholder="News Author *" name='author'  required />
                     </div>
 
-                    <div className="form-group my-3">
+                    <div className="my-3">
                         <label htmlFor="category">News Category</label> <br />
                         <input onBlur={handleBlur} type='text' placeholder="News Category *" name='category'  required />
                     </div>
 
-                    <div className="form-group my-3">
+                    <div className="my-3">
                         <label htmlFor="details" >News Details</label> <br />
                         <input onBlur={handleBlur} type='text' placeholder="News Details *" name='details'  required />
                     </div>

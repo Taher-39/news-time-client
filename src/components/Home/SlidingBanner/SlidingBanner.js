@@ -1,60 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import coronaImg from '../../../Imgs/corona1.jpg';
 import fakeSlideData from './SlideFakeData';
 import SlideCard from './SlideCard';
+import { useHistory } from 'react-router';
 
 const SlidingBanner = () => {
-    const fakeNews = [
-        {
-            newsId: 1,
-            category: "Corona",
-            author: 'John Deo',
-            date: new Date().toLocaleDateString(),
-            heading: 'India’s COVID-battered Kerala state now on alert for Nipah virus',
-            img: coronaImg
-        },
-        {
-            newsId: 1,
-            category: "Corona",
-            author: 'John Deo',
-            date: new Date().toLocaleDateString(),
-            heading: 'India’s COVID-battered Kerala state now on alert for Nipah virus',
-            img: coronaImg
-        },
-        {
-            newsId: 1,
-            category: "Corona",
-            author: 'John Deo',
-            date: new Date().toLocaleDateString(),
-            heading: 'India’s COVID-battered Kerala state now on alert for Nipah virus',
-            img: coronaImg
-        },
-        {
-            newsId: 1,
-            category: "Corona",
-            author: 'John Deo',
-            date: new Date().toLocaleDateString(),
-            heading: 'India’s COVID-battered Kerala state now on alert for Nipah virus',
-            img: coronaImg
-        }
-    ]
+    const [headerNews, setHeaderNews] = useState([])
+    useEffect(() => {
+        fetch('https://fathomless-everglades-75760.herokuapp.com/getNewsDetails')
+            .then(res => res.json())
+            .then(data => setHeaderNews(data))
+    }, [])
+
+    const slidingNews = headerNews.filter(item => item.newsCategory === "Slide");
+    const coronaNews = headerNews.filter(item => item.newsCategory === "Corona");
+
+    const history = useHistory()
+    const detailsNews = (_id) => {
+        history.push(`/details-news/${_id}`)
+    }
 
     return (
         <section className='container mx-auto p-6 sliding-header'>
             <div className="flex">
                 <div className="flex-1 px-6">
-                    <SlideCard fakeSlideData={fakeSlideData} />
+                    <SlideCard slidingNews={slidingNews} />
                 </div>
                 <div className="flex-1 px-6">
                     <div className="grid grid-cols-2 gap-4">
-                        {
-                            fakeNews.map(item => <div key={item.newsId}>
-                                <img src={item.img} alt="news-img" />
-                                <p className='tracking-normal font-medium'>{item.heading}</p>
+                        { /* // const { title, newsUploadDate, newsAuthor, newsCategory, newsDetails, image } = slidingNews; */
+                            coronaNews.map(item => <div key={item.newsId}>
+                                <img src={`data:image/png;base64, ${item.image.img}`} alt="news-img" />
+                                <p className='tracking-normal font-medium'>{item.title}</p>
                                 <div className="details-area flex flex-row justify-between py-3">
-                                    <p>{item.author}</p>
-                                    <button className='btn'>Details</button>
-                                    <p>{item.date}</p>
+                                    <p>{item.newsAuthor}</p>
+                                    <button className='btn' onClick={() => detailsNews(item._id)}>Details</button>
+                                    <p>{item.newsUploadDate}</p>
                                 </div>
                             </div>)
                         }
