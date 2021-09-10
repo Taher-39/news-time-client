@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 
@@ -33,6 +34,7 @@ const NewsDetails = () => {
                         <h1>Loading</h1>
                     </div>
             }
+            <Footer></Footer>
         </section>
     );
 };

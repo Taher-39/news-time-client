@@ -6,7 +6,7 @@ const Header = () => {
     const day = new Date().toDateString()
     return (
         <header className='heading text-white'>
-            <div className='container mx-auto md:flex flex-row justify-between' >
+            <div className='heading-content container mx-auto md:flex flex-row justify-between' >
                 <div className='social-icon'>
                     <span><Link to="//facebook.com"><FaFacebook size="1.3em" /></Link></span>
                     <span><Link to="//instagram.com"><FaInstagram size="1.3em" /></Link></span>

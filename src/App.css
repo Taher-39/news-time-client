@@ -125,13 +125,20 @@ input[type="text"], input[type="password"],  input[type="email"] {
 .footer li:hover{
   color: white;
 }
+
+/* footer section style end */
+
+
+/* responsive design style start */
 @media only screen and (max-width: 600px) {
-  .footer-content {
-    /* text-align: center; */
+  .footer-content, .heading-content {
     padding-left: 120px;
+  }
+  .date{
+    padding-left: 70px;
   }
   .footer-bottom{
     padding-right: 100px;
   }
 }
-/* footer section style end */
+/* responsive design style end */
