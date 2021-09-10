@@ -20,15 +20,16 @@ const SlidingBanner = () => {
 
     return (
         <section className='container mx-auto p-6 sliding-header'>
-            <div className="flex">
+            <div className="md:flex">
                 <div className="flex-1 px-6">
                     <SlideCard slidingNews={slidingNews} />
                 </div>
-                <div className="flex-1 px-6">
-                    <div className="grid grid-cols-2 gap-4">
-                        { /* // const { title, newsUploadDate, newsAuthor, newsCategory, newsDetails, image } = slidingNews; */
+                <div className="flex-1 px-6 pt-3">
+                    {/* <h1 className="mb-4 text-center uppercase  tracking-wide text-xl font-semibold">Top Corona News</h1> */}
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
+                        { 
                             coronaNews.map(item => <div key={item.newsId}>
-                                <img src={`data:image/png;base64, ${item.image.img}`} alt="news-img" />
+                                <img src={`data:image/png;base64, ${item?.image?.img}`} alt="news-img" />
                                 <p className='tracking-normal font-medium'>{item.title}</p>
                                 <div className="details-area flex flex-row justify-between py-3">
                                     <p>{item.newsAuthor}</p>

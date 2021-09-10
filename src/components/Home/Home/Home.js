@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 import PoliticsNews from '../PoliticsNews/PoliticsNews';
@@ -12,6 +13,7 @@ const Home = () => {
             <Navbar></Navbar>
             <SlidingBanner></SlidingBanner>
             <PoliticsNews></PoliticsNews>
+            <Footer></Footer>
         </section>
     );
 };

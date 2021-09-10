@@ -111,4 +111,27 @@ input[type="text"], input[type="password"],  input[type="email"] {
     border: 0;
     border: 1px solid lightblue;
 }
+
+.details-img{
+  min-width: 100%;
+}
 /* admin section style end */
+
+/* footer section style start */
+.footer{
+  background-color: #000;
+  color: #fff;
+}
+.footer li:hover{
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .footer-content {
+    /* text-align: center; */
+    padding-left: 120px;
+  }
+  .footer-bottom{
+    padding-right: 100px;
+  }
+}
+/* footer section style end */

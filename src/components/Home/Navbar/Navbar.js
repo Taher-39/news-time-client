@@ -7,7 +7,7 @@ const Navbar = () => {
     return (
         <section>
             <nav className='navbar p-6 tracking-normal font-medium'>
-                <ul className='flex flex-row justify-center'>
+                <ul className='md:flex flex-row justify-center'>
                     <li>
                         <Link to="/">Home</Link>
                     </li>

@@ -29,7 +29,7 @@ const SlideCard = ({ slidingNews }) => {
                 className={index === current ? "slide active" : "slide"}>
                     {
                         index === current && <div className="slide-details">
-                            <img src={`data:image/png;base64, ${item.image.img}`} alt="Slide-Img" className='slide-img' />
+                            <img src={`data:image/png;base64, ${item?.image?.img}`} alt="Slide-Img" className='slide-img' />
                             <h1 className='tracking-medium font-medium'>{item.title}</h1>
 
                             <div className="flex flex-row justify-between py-3">
