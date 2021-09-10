@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Navbar from '../Navbar/Navbar';
 
-const PoliticsNewsDetails = () => {
+const NewsDetails = () => {
     const { _id } = useParams()
     const [newsDetail, setNewsDetail] = useState({})
     const { title, newsUploadDate, newsAuthor, newsCategory, newsDetails, image } = newsDetail;
@@ -28,13 +28,13 @@ const PoliticsNewsDetails = () => {
                     </div>
                     <h1 className='tracking-normal font-medium my-6 text-4xl'>{title}</h1>
                     <p className='my-6'>{newsDetails}</p>
-                </div> 
-                : <div>
-                    <h1>Loading</h1>
                 </div>
+                    : <div>
+                        <h1>Loading</h1>
+                    </div>
             }
         </section>
     );
 };
 
-export default PoliticsNewsDetails;
+export default NewsDetails;

@@ -6,13 +6,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import PoliticsNewsDetails from './components/Home/PoliticsNews/PoliticsNewsDetails';
 import InternationalNews from './components/Home/InternationalNews/InternationalNews';
 import SportsNews from './components/Home/SportsNews/SportsNews';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Login from './components/Login/Login';
 import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
+import NewsDetails from './components/Home/NewsDetails/NewsDetails';
 
 export const UserContext = createContext()
 
@@ -38,7 +38,7 @@ function App() {
             <SportsNews></SportsNews>
           </PrivateRoute>
           <Route path="/details-news/:_id">
-            <PoliticsNewsDetails></PoliticsNewsDetails>
+            <NewsDetails></NewsDetails>
           </Route>
           <Route path="/">
             <Home />

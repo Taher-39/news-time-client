@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import coronaImg from '../../../Imgs/corona1.jpg';
-import fakeSlideData from './SlideFakeData';
 import SlideCard from './SlideCard';
 import { useHistory } from 'react-router';
 
