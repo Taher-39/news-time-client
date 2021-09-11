@@ -33,14 +33,18 @@ const Login = () => {
             }
         });
         history.replace(from)
+
+        // if(isAdmin || admin) {
+        //     history.replace(from)
+        // }
     }
     useEffect(() => {
-        fetch("http://localhost:4000/getAdmin")
+        fetch("https://fathomless-everglades-75760.herokuapp.com/getAdmin")
             .then(res => res.json())
             .then(data => setAdmins(data))
     }, [])
     useEffect(() => {
-        fetch("http://localhost:4000/isAdmin", {
+        fetch("https://fathomless-everglades-75760.herokuapp.com/isAdmin", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
