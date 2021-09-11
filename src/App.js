@@ -13,6 +13,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Login from './components/Login/Login';
 import AddAdmin from './components/Admin/AddAdmin/AddAdmin';
 import NewsDetails from './components/Home/NewsDetails/NewsDetails';
+import Sidenav from './components/Home/SideBar/Sidenav';
 
 export const UserContext = createContext()
 
@@ -21,6 +22,7 @@ function App() {
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
+        <Sidenav />
         <Switch>
           <PrivateRoute path="/admin">
             <Admin />
