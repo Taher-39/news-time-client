@@ -38,7 +38,7 @@ const AddAdmin = () => {
                         <input onBlur={handleBlur} type="email" name="email" id="email" required placeholder=' abc@gmail.com' />
                     </div>
                     <div className="my-3">
-                        <label htmlFor="email">Admin Email</label> <br />
+                        <label htmlFor="email">Admin Password</label> <br />
                         <input onBlur={handleBlur} type="password" name="password" id="password" required placeholder=' password' />
                     </div>
                     <button type="submit" className='btn my-2'>Submit</button>

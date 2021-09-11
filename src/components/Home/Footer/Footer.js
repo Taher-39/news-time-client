@@ -18,7 +18,7 @@ const Footer = () => {
                         <span><Link to="//youtube.com"><FaYoutube size="1.3em" /></Link></span>
                     </div>
                 </div>
-                <div class="md:flex flex-row justify-around">
+                <div className="md:flex flex-row justify-around">
                     <div className='mb-6'>
                         <h1 className='text-2xl font-normal pb-3'>Quick Links</h1>
                         <ul className='text-gray-400'>

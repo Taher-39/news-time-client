@@ -28,7 +28,7 @@ const SlidingBanner = () => {
                     {/* <h1 className="mb-4 text-center uppercase  tracking-wide text-xl font-semibold">Top Corona News</h1> */}
                     <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4">
                         { 
-                            coronaNews.map(item => <div key={item.newsId}>
+                            coronaNews.map(item => <div key={item._id}>
                                 <img src={`data:image/png;base64, ${item?.image?.img}`} alt="news-img" />
                                 <p className='tracking-normal font-medium'>{item.title}</p>
                                 <div className="details-area flex flex-row justify-between py-3">

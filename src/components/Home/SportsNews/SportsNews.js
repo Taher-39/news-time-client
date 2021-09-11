@@ -19,7 +19,7 @@ const SportsNews = () => {
         history.push(`/details-news/${_id}`)
     }
     return (
-        <section className='py-6'>
+        <section>
             <Header />
             <Navbar />
             <h1 className='bg-black text-center text-white py-4 font-3xl'>Top Sports News</h1>

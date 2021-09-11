@@ -104,7 +104,7 @@
 
 /* admin section style start */
 input[type="text"], input[type="password"],  input[type="email"] {
-    width: 300px;
+    width: 250px;
     height: 35px;
     padding-right: 50px;
     outline-color: rgb(84, 105, 106);
