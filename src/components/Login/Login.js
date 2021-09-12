@@ -32,7 +32,8 @@ const Login = () => {
                 admin = true;
             }
         });
-        history.replace(from)
+        alert("Use Google Login, This feature on processing...")
+        // history.replace(from)
 
         // if(isAdmin || admin) {
         //     history.replace(from)
