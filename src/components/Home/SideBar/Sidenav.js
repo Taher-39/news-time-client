@@ -22,7 +22,7 @@ const Sidenav = () => {
                 <ul className='nav-menu-items' onClick={showSidebar}>
                     <li>
                         <Link to="#" className='menu-bars'>
-                            <AiIcons.AiOutlineClose />
+                            <AiIcons.AiOutlineClose className='ml-6 sidebar-close' />
                         </Link>
                     </li>
                     {

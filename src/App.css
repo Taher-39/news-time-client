@@ -208,13 +208,16 @@ input[type="text"], input[type="password"],  input[type="email"] {
 /* responsive design style start */
 @media only screen and (max-width: 600px) {
   .footer-content, .heading-content {
-    padding-left: 120px;
+    padding-left: 60px;
   }
   .date{
     padding-left: 50px;
   }
   .footer-bottom{
     padding-right: 100px;
+  }
+  .navbar{
+    display: none;
   }
 }
 /* responsive design style end */
